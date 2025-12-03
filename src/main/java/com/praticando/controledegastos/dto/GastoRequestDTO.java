@@ -1,14 +1,14 @@
 package com.praticando.controledegastos.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class GastoRequestDTO {
 
     private Long id_categoria;
