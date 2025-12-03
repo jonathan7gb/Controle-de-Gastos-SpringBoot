@@ -12,9 +12,9 @@ import lombok.*;
 @Setter
 public class CategoriaGasto {
 
-    @ManyToOne
-    @JoinColumn(name = "id_categoria", nullable = false)
-    private CategoriaGasto categoria;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_categoria;
 
     @Column(nullable = false, length = 100)
     private String nome_categoria;

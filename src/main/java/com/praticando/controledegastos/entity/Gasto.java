@@ -19,8 +19,9 @@ public class Gasto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private Long id_categoria;
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", nullable = false)
+    private CategoriaGasto categoria;
 
     @Column(nullable = false)
     private String descricao;
